@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Producción y Resultados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="datee"],
+        input[type="timee"] {
+            width: 100%;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte de Producción RP.</h1>
+        <form id="form-reporte-resultados"   action="https://formspree.io/f/xdknvaaw"
+        method="POST"  >
+            <div class="section">
+                
+                <label for="Operador">Operador:</label>
+                <input type="texto" id="operador" name="operador" required>
+                
+                <label for="Maquina">Máquina:</label>
+                <input type="texto" id="maquina" name="maquina" required>
+                
+                <label for="Fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <br></br>
+                <label for="Coordinador">Coordinador de Área:</label>
+                <input type="texto" id="coordinador" name="coordinador" >
+                <br></br>
+                <label for="Hora-inicio">Hora de Inicio:</label>
+                <input type="hora" id="hora-inicio" name="hora-inicio" required>
+                
+                <label for="Hora-final">Hora Final:</label>
+                <input type="hora" id="hora-final" name="hora-final" required>
+                <br></br>
+                <label for="Descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <br></br>
+                <div class="form-group">
+                    <label for="tipo">ON/OFF:</label>
+                    <select id="tipo" name="tipo" >
+                        <option value="ON">ON</option>
+                        <option value="OFF">OFF</option>
+                    </select>
+                </div>
+                <br></br>
+                <label for="Cantidad-producida">Cantidad Producida:</label>
+                <input type="number" id="cantidad-producida" name="cantidad-producida" >
+                <br></br>
+                <label for="Meta por hora">Meta por Hora:</label>
+                <input type="number" id="meta-hora" name="meta-hora" >
+                <br></br>
+                <label for="Meta por dia">Meta por Día:</label>
+                <input type="number" id="meta-dia" name="meta-dia" >
+                <br></br>
+                <label for="Total">Total:</label>
+                <input type="number" id="total" name="total" >
+            </div>
+            <div class="section">
+                <h2>Resultados</h2>
+                
+                <label for="Diseño">Diseño:</label>
+                <input type="text" id="tema" name="tema">
+                <br></br>
+                <label for="Cavidades">Cavidades:</label>
+                <input type="number" id="cavidades" name="cavidades" >
+                <br></br>
+                <div class="form-group">
+                    <label for="tipo">Produccion o Desarrollo</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="Produccion">Produccion</option>
+                        <option value="Desarrollo">Desarrollo</option>
+                    </select>
+                </div>
+                <br></br>
+                <label for="Tiempo-ciclo-estandar">Tiempo Ciclo Estándar:</label>
+                <input type="text" id="tiempo-ciclo-estandar" name="tiempo-ciclo-estandar" >
+                <br></br>
+                <label for="Tiempo-ciclo-produccion">Tiempo Ciclo en Producción:</label>
+                <input type="text" id="tiempo-ciclo-produccion" name="tiempo-ciclo-produccion" >
+                <br></br>
+                <label for="Produccion por dia">Producción por Día:</label>
+                <input type="number" id="produccion-dia" name="produccion-dia" >
+                <br></br>
+                <label for="Inspeccionados">Inspeccionados:</label>
+                <input type="number" id="inspeccionados" name="inspeccionados" >
+                <br></br>
+                <label for="Buenos">Buenos:</label>
+                <input type="number" id="buenos" name="buenos" >
+                <br></br>
+                <label for="Defectuosos">Defectuosos:</label>
+                <input type="number" id="defectuosos" name="defectuosos" >
+                <br></br>
+                <label for="Transferidos">Transferidos:</label>
+                <input type="number" id="transferidos" name="transferidos" >
+                <br></br>
+                <label for="Comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Enviar Reporte</button>
+        </form>
+    </div>
+</body>
+</html>
